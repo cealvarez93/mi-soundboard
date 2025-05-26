@@ -14,7 +14,7 @@ const commands = [
          .setDescription('Nombre del sonido')
          .setRequired(true)
          .addChoices(
-           { name: 'coca',  value: 'coca'  },
+           { name: 'luli_snack',  value: 'luli_snack'  },
            { name: 'salome', value: 'salome' }
          )
     )

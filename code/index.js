@@ -16,7 +16,7 @@ const client = new Client({
 });
 
 const SOUNDS = {
-  coca:   'https://cealvarez93.github.io/mi-soundboard/sounds/Salome.mp4',
+  luli_snack:   'https://cealvarez93.github.io/mi-soundboard/sounds/luli_snack.mp4',
   salome:  'https://cealvarez93.github.io/mi-soundboard/sounds/Salome.mp4',
 };
 
