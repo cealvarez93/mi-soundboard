@@ -1,8 +1,9 @@
 // deploy-commands.js
+require('dotenv').config();
+const TOKEN = process.env.DISCORD_TOKEN;
 const { REST, Routes, SlashCommandBuilder } = require('discord.js');
-const TOKEN = 'MTM3NjY0MzM5OTY0MTIwNjg0NA.Gb-RWh.-3oo8SZgjlMlYTPb98PkfVtIx1yvVxgceJgMt0';
-const CLIENT_ID = '1376643399641206844';
-const GUILD_ID  = '1280706676470579223';  // para registrar en tu servidor de pruebas
+const CLIENT_ID = process.env.DISCORD_CLIENT_ID;
+const GUILD_ID  = process.env.DISCORD_GUILD_ID;
 
 const commands = [
   new SlashCommandBuilder()
