@@ -34,7 +34,8 @@ const commands = [
            { name: 'perre_vergue', value: 'perre_vergue' },
            { name: 'paremos_la_webada', value: 'paremos_la_webada' },
            { name: 'smack_him', value: 'smack_him' },
-           { name: 'que_tiene_que_ver_esa_wea', value: 'que_tiene_que_ver_esa_wea' }
+           { name: 'que_tiene_que_ver_esa_wea', value: 'que_tiene_que_ver_esa_wea' },
+           { name: 'another_one', value: 'another_one' }
          )
     )
     .toJSON()

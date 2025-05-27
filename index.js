@@ -44,6 +44,7 @@ const SOUNDS = {
   paremos_la_webada: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/paremos_la_webada.mp4',
   smack_him: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/smack_him.mp4',
   que_tiene_que_ver_esa_wea: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/que_tiene_que_ver_esa_wea.mp4',
+  another_one: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/another_one.mp4',
 };
 
 const player = createAudioPlayer({ behaviors: { noSubscriber: NoSubscriberBehavior.Stop } });
