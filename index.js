@@ -23,8 +23,9 @@ const client = new Client({
 });
 
 const SOUNDS = {
-  luli_snack:   'https://cealvarez93.github.io/mi-soundboard/sounds/luli_snack.mp4',
+  luli_snack: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/luli_snack.mp4',
   salome:  'https://cealvarez93.github.io/mi-soundboard/sounds/Salome.mp4',
+  tregua:  'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/tregua.mp4',
 };
 
 const player = createAudioPlayer({ behaviors: { noSubscriber: NoSubscriberBehavior.Stop } });

@@ -15,7 +15,8 @@ const commands = [
          .setRequired(true)
          .addChoices(
            { name: 'luli_snack',  value: 'luli_snack'  },
-           { name: 'salome', value: 'salome' }
+           { name: 'salome', value: 'salome' },
+           { name: 'tregua', value: 'tregua' }
          )
     )
     .toJSON()
