@@ -18,7 +18,13 @@ const commands = [
            { name: 'salome', value: 'salome' },
            { name: 'tregua', value: 'tregua' },
            { name: 'ni_fifes_ni_potaxies', value: 'ni_fifes_ni_potaxies' },
-           { name: 'hey_baby_girl', value: 'hey_baby_girl' }
+           { name: 'hey_baby_girl', value: 'hey_baby_girl' },
+           { name: 'hay_una_fiesta', value: 'hay_una_fiesta' },
+           { name: 'veoveo', value: 'veoveo' },
+           { name: 'devorame', value: 'devorame' },
+           { name: 'electronica', value: 'electronica' },
+           { name: 'una_chica', value: 'una_chica' },
+           { name: 'me_teni_chata', value: 'me_teni_chata' }
          )
     )
     .toJSON()
