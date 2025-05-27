@@ -16,7 +16,6 @@ const commands = [
          .addChoices(
            { name: 'luli_snack',  value: 'luli_snack'  },
            { name: 'salome', value: 'salome' },
-           { name: 'tregua', value: 'tregua' },
            { name: 'ni_fifes_ni_potaxies', value: 'ni_fifes_ni_potaxies' },
            { name: 'hey_baby_girl', value: 'hey_baby_girl' },
            { name: 'hay_una_fiesta', value: 'hay_una_fiesta' },
@@ -24,7 +23,6 @@ const commands = [
            { name: 'devorame', value: 'devorame' },
            { name: 'electronica', value: 'electronica' },
            { name: 'una_chica', value: 'una_chica' },
-           { name: 'me_teni_chata', value: 'me_teni_chata' },
            { name: 'pop_lolita', value: 'pop_lolita' },
            { name: 'pop_loleetah', value: 'pop_loleetah' },
            { name: 'ci_ai_ci', value: 'ci_ai_ci' },
@@ -39,7 +37,8 @@ const commands = [
            { name: 'roblox', value: 'roblox' },
            { name: 'cuando_un_pvp', value: 'cuando_un_pvp' },
            { name: 'bubba_lullaby', value: 'bubba_lullaby' },
-           { name: 'noviembre_sin_ti', value: 'noviembre_sin_ti' }
+           { name: 'noviembre_sin_ti', value: 'noviembre_sin_ti' },
+           { name: 'ven_conmigo', value: 'ven_conmigo' }
          )
     )
     .toJSON()

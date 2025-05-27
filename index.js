@@ -25,7 +25,6 @@ const client = new Client({
 const SOUNDS = {
   luli_snack: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/luli_snack.mp4',
   salome:  'https://cealvarez93.github.io/mi-soundboard/sounds/Salome.mp4',
-  tregua:  'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/tregua.mp4',
   ni_fifes_ni_potaxies:  'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ni_fifes_ni_potaxies.mp4',
   hey_baby_girl:  'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/hey_baby_girl.mp4',
   hay_una_fiesta: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/hay_una_fiesta.mp4',
@@ -33,7 +32,6 @@ const SOUNDS = {
   devorame: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/devorame.mp4',
   electronica: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/electronica.mp4',
   una_chica: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/una_chica.mp4',
-  me_teni_chata: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/me_teni_chata.mp4',
   pop_lolita: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/pop_lolita.mp4',
   pop_loleetah: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/pop_loleetah.mp4',
   ci_ai_ci: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ci_ai_ci.mp4',
@@ -49,6 +47,7 @@ const SOUNDS = {
   cuando_un_pvp: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/cuando_un_pvp.mp4',
   bubba_lullaby: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/bubba_lullaby.mp4',
   noviembre_sin_ti: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/noviembre_sin_ti.mp4',
+  ven_conmigo: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ven_conmigo.mp4',
 };
 
 const player = createAudioPlayer({ behaviors: { noSubscriber: NoSubscriberBehavior.Stop } });
