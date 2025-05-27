@@ -29,7 +29,9 @@ const commands = [
            { name: 'pop_loleetah', value: 'pop_loleetah' },
            { name: 'ci_ai_ci', value: 'ci_ai_ci' },
            { name: 'devour_me', value: 'devour_me' },
-           { name: 'a_girl', value: 'a_girl' }
+           { name: 'a_girl', value: 'a_girl' },
+           { name: 'potaxio_potaxio', value: 'potaxio_potaxio' },
+           { name: 'perre_vergue', value: 'perre_vergue' }
          )
     )
     .toJSON()
