@@ -32,7 +32,9 @@ const commands = [
            { name: 'a_girl', value: 'a_girl' },
            { name: 'potaxio_potaxio', value: 'potaxio_potaxio' },
            { name: 'perre_vergue', value: 'perre_vergue' },
-           { name: 'paremos_la_webada', value: 'paremos_la_webada' }
+           { name: 'paremos_la_webada', value: 'paremos_la_webada' },
+           { name: 'smack_him', value: 'smack_him' },
+           { name: 'que_tiene_que_ver_esa_wea', value: 'que_tiene_que_ver_esa_wea' }
          )
     )
     .toJSON()
