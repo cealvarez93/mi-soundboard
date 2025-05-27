@@ -48,6 +48,7 @@ const SOUNDS = {
   roblox: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/roblox.mp4',
   cuando_un_pvp: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/cuando_un_pvp.mp4',
   bubba_lullaby: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/bubba_lullaby.mp4',
+  noviembre_sin_ti: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/noviembre_sin_ti.mp4',
 };
 
 const player = createAudioPlayer({ behaviors: { noSubscriber: NoSubscriberBehavior.Stop } });

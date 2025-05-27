@@ -38,7 +38,8 @@ const commands = [
            { name: 'another_one', value: 'another_one' },
            { name: 'roblox', value: 'roblox' },
            { name: 'cuando_un_pvp', value: 'cuando_un_pvp' },
-           { name: 'bubba_lullaby', value: 'bubba_lullaby' }
+           { name: 'bubba_lullaby', value: 'bubba_lullaby' },
+           { name: 'noviembre_sin_ti', value: 'noviembre_sin_ti' }
          )
     )
     .toJSON()
