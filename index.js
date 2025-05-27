@@ -26,6 +26,8 @@ const SOUNDS = {
   luli_snack: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/luli_snack.mp4',
   salome:  'https://cealvarez93.github.io/mi-soundboard/sounds/Salome.mp4',
   tregua:  'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/tregua.mp4',
+  ni_fifes_ni_potaxies:  'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ni_fifes_ni_potaxies.mp4',
+  hey_baby_girl:  'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/hey_baby_girl.mp4',
 };
 
 const player = createAudioPlayer({ behaviors: { noSubscriber: NoSubscriberBehavior.Stop } });

@@ -16,7 +16,9 @@ const commands = [
          .addChoices(
            { name: 'luli_snack',  value: 'luli_snack'  },
            { name: 'salome', value: 'salome' },
-           { name: 'tregua', value: 'tregua' }
+           { name: 'tregua', value: 'tregua' },
+           { name: 'ni_fifes_ni_potaxies', value: 'ni_fifes_ni_potaxies' },
+           { name: 'hey_baby_girl', value: 'hey_baby_girl' }
          )
     )
     .toJSON()
