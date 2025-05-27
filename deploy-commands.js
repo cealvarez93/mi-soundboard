@@ -31,7 +31,8 @@ const commands = [
            { name: 'devour_me', value: 'devour_me' },
            { name: 'a_girl', value: 'a_girl' },
            { name: 'potaxio_potaxio', value: 'potaxio_potaxio' },
-           { name: 'perre_vergue', value: 'perre_vergue' }
+           { name: 'perre_vergue', value: 'perre_vergue' },
+           { name: 'paremos_la_webada', value: 'paremos_la_webada' }
          )
     )
     .toJSON()
