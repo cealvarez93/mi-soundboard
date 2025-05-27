@@ -24,9 +24,9 @@ const commands = [
            { name: 'devorame', value: 'devorame' },
            { name: 'electronica', value: 'electronica' },
            { name: 'una_chica', value: 'una_chica' },
-           { name: 'me_teni_chata', value: 'me_teni_chata' }
+           { name: 'me_teni_chata', value: 'me_teni_chata' },
            { name: 'pop_lolita', value: 'pop_lolita' },
-           { name: 'pop_loleetah', value: 'pop_loleetah' }
+           { name: 'pop_loleetah', value: 'pop_loleetah' },
            { name: 'ci_ai_ci', value: 'ci_ai_ci' },
            { name: 'devour_me', value: 'devour_me' },
            { name: 'a_girl', value: 'a_girl' }
