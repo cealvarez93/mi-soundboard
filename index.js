@@ -47,7 +47,7 @@ const SOUNDS = {
   cuando_un_pvp: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/cuando_un_pvp.mp4',
   bubba_lullaby: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/bubba_lullaby.mp4',
   noviembre_sin_ti: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/noviembre_sin_ti.mp4',
-  ven_conmigo: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ven_conmigo.mp4',,
+  ven_conmigo: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ven_conmigo.mp4',
   no_mickey: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/no_mickey.mp4',
 };
 
@@ -59,6 +59,22 @@ client.once('ready', () => {
 
 // Responder a slash command /play
 client.on('interactionCreate', async (i) => {
+  // Autocompletado
+  if (i.isAutocomplete()) {
+    const focused = i.options.getFocused();
+    const filtered = Object.keys(SOUNDS).filter(name =>
+      name.toLowerCase().includes(focused.toLowerCase())
+    );
+    await i.respond(
+      filtered.slice(0, 25).map(name => ({
+        name: name.replace(/_/g, ' '),
+        value: name
+      }))
+    );
+    return;
+  }
+
+  // Comando /play
   if (!i.isCommand()) return;
   if (i.commandName === 'play') {
     const sound = i.options.getString('name');
@@ -71,16 +87,17 @@ client.on('interactionCreate', async (i) => {
     if (!channel) {
       return i.reply({ content: 'Debes estar en un canal de voz primero.', ephemeral: true });
     }
-    // Conectar y reproducir
+
     const conn = joinVoiceChannel({
       channelId: channel.id,
       guildId: channel.guild.id,
       adapterCreator: channel.guild.voiceAdapterCreator,
     });
+
     const resource = createAudioResource(url);
     player.play(resource);
     conn.subscribe(player);
-    await i.reply({ content: `▶️ Reproduciendo: **${sound}**`, ephemeral: false });
+    await i.reply({ content: `▶️ Reproduciendo: **${sound.replace(/_/g, ' ')}**`, ephemeral: false });
   }
 });
 

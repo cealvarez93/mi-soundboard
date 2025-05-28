@@ -13,33 +13,7 @@ const commands = [
       opt.setName('name')
          .setDescription('Nombre del sonido')
          .setRequired(true)
-         .addChoices(
-           { name: 'luli_snack',  value: 'luli_snack'  },
-           { name: 'salome', value: 'salome' },
-           { name: 'ni_fifes_ni_potaxies', value: 'ni_fifes_ni_potaxies' },
-           { name: 'hey_baby_girl', value: 'hey_baby_girl' },
-           { name: 'hay_una_fiesta', value: 'hay_una_fiesta' },
-           { name: 'veoveo', value: 'veoveo' },
-           { name: 'devorame', value: 'devorame' },
-           { name: 'electronica', value: 'electronica' },
-           { name: 'una_chica', value: 'una_chica' },
-           { name: 'pop_lolita', value: 'pop_lolita' },
-           { name: 'pop_loleetah', value: 'pop_loleetah' },
-           { name: 'ci_ai_ci', value: 'ci_ai_ci' },
-           { name: 'devour_me', value: 'devour_me' },
-           { name: 'a_girl', value: 'a_girl' },
-           { name: 'potaxio_potaxio', value: 'potaxio_potaxio' },
-           { name: 'perre_vergue', value: 'perre_vergue' },
-           { name: 'paremos_la_webada', value: 'paremos_la_webada' },
-           { name: 'smack_him', value: 'smack_him' },
-           { name: 'que_tiene_que_ver_esa_wea', value: 'que_tiene_que_ver_esa_wea' },
-           { name: 'another_one', value: 'another_one' },
-           { name: 'roblox', value: 'roblox' },
-           { name: 'cuando_un_pvp', value: 'cuando_un_pvp' },
-           { name: 'bubba_lullaby', value: 'bubba_lullaby' },
-           { name: 'noviembre_sin_ti', value: 'noviembre_sin_ti' },
-           { name: 'ven_conmigo', value: 'ven_conmigo' }
-         )
+         .setAutocomplete(true)
     )
     .toJSON()
 ];
