@@ -50,6 +50,7 @@ const SOUNDS = {
   ven_conmigo: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ven_conmigo.mp4',
   no_mickey: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/no_mickey.mp4',
   esa_hembra: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/esa_hembra.mp4',
+  rocko: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/rocko.mp4',
 };
 
 const player = createAudioPlayer({ behaviors: { noSubscriber: NoSubscriberBehavior.Stop } });
