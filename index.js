@@ -55,6 +55,7 @@ const SOUNDS = {
   baila_puchaina: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/baila_puchaina.mp4',
   donde_estan_las_gatas: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/donde_estan_las_gatas.mp4',
   plus_20: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/plus_20.mp4',
+  que_malcriados: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/que_malcriados.mp4',
 };
 
 const player = createAudioPlayer({ behaviors: { noSubscriber: NoSubscriberBehavior.Stop } });
