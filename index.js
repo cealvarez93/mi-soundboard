@@ -58,6 +58,7 @@ const SOUNDS = {
   que_malcriados: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/que_malcriados.mp4',
   ken_lee: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ken_lee.mp4',
   without_you: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/without_you.mp4',
+  can_you_say_hijo_de_la_gran_puta: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/can_you_say_hijo_de_la_gran_puta.mp4',
 };
 
 const player = createAudioPlayer({ behaviors: { noSubscriber: NoSubscriberBehavior.Stop } });
