@@ -3,6 +3,7 @@ require('dotenv').config();
 console.log('> Token cargado:', process.env.DISCORD_TOKEN ? '[OK]' : '[NO]');  // DEBUG
 const { Client, GatewayIntentBits } = require('discord.js');
 const TOKEN = process.env.DISCORD_TOKEN;
+const ytdl = require('ytdl-core');
 
 if (!TOKEN) {
   console.error('❌ Falta DISCORD_TOKEN en .env');
@@ -60,6 +61,7 @@ const SOUNDS = {
   can_you_say_hijo_de_la_gran_puta: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/can_you_say_hijo_de_la_gran_puta.mp4',
   la_guadalupene: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/la_guadalupene.mp4',
   putologa: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/putologa.mp4',
+  plains_of_eternity: 'https://www.youtube.com/watch?v=1p2dHxuUVig&list=RDPVPv0IF-D64&index=6',
 };
 
 const player = createAudioPlayer({ behaviors: { noSubscriber: NoSubscriberBehavior.Stop } });
@@ -110,6 +112,20 @@ client.on('interactionCreate', async (i) => {
     }
 
     const sound = i.options.getString('name');
+
+    // 1) Si es URL de YouTube
+    if (ytdl.validateURL(sound)) {
+      const channel = i.member.voice.channel;
+      if (!channel) return i.reply({ content: 'Debes estar en un canal de voz.', ephemeral: true });
+      const conn = joinVoiceChannel({ channelId: channel.id, guildId: channel.guild.id, adapterCreator: channel.guild.voiceAdapterCreator });
+      const stream = ytdl(sound, { filter: 'audioonly', quality: 'highestaudio' });
+      const resource = createAudioResource(stream, { inputType: StreamType.Arbitrary });
+      player.play(resource);
+      conn.subscribe(player);
+      return i.reply({ content: `▶️ Reproduciendo YouTube: <${sound}>` });
+    }
+
+    // 2) Si es un sonido del objeto SOUNDS
     const url = SOUNDS[sound];
     if (!url) {
       return i.reply({ content: `Desconozco el sonido \`${sound}\`.`, ephemeral: true });
