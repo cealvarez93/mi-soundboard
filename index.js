@@ -57,8 +57,9 @@ const SOUNDS = {
   plus_20: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/plus_20.mp4',
   que_malcriados: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/que_malcriados.mp4',
   ken_lee: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ken_lee.mp4',
-  without_you: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/without_you.mp4',
   can_you_say_hijo_de_la_gran_puta: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/can_you_say_hijo_de_la_gran_puta.mp4',
+  la_guadalupene: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/la_guadalupene.mp4',
+  putologa: 'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/putologa.mp4',
 };
 
 const player = createAudioPlayer({ behaviors: { noSubscriber: NoSubscriberBehavior.Stop } });
@@ -84,9 +85,30 @@ client.on('interactionCreate', async (i) => {
     return;
   }
 
+    // Comando /sounds: muestra el glosario
+  if (i.isCommand() && i.commandName === 'sounds') {
+    const soundList = Object.keys(SOUNDS)
+      .map(name => `\`${name}\` — ${name.replace(/_/g, ' ')}`)
+      .join('\n');
+
+    return i.reply({
+      content: `**Glosario de sonidos disponibles:**\n${soundList}`,
+      ephemeral: true
+    });
+  }
+
   // Comando /play
   if (!i.isCommand()) return;
   if (i.commandName === 'play') {
+
+    // Verifica que esté en el canal correcto
+    if (i.channelId !== '1280706676470579226') {
+      return i.reply({
+        content: '❌ Este comando solo se puede usar en `#clips-y-destacados`.',
+        ephemeral: true
+      });
+    }
+
     const sound = i.options.getString('name');
     const url = SOUNDS[sound];
     if (!url) {

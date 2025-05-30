@@ -15,6 +15,10 @@ const commands = [
          .setRequired(true)
          .setAutocomplete(true)
     )
+    .toJSON(),
+    new SlashCommandBuilder()
+    .setName('sounds')
+    .setDescription('Muestra el glosario de sonidos disponibles')
     .toJSON()
 ];
 
