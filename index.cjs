@@ -73,7 +73,9 @@ const SOUNDS = {
   y_me_le_ocurrio_otra_idea:   'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/y_me_le_ocurrio_otra_idea.mp4',
   milton_fajer:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/milton_fajer.mp4',
   negra_nieves:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/negra_nieves.mp4',
-  poppers:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/poppers.mp4',
+  poppers:                    'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/poppers.mp4',
+  no_mi_nieta:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/no_mi_nieta.mp4',
+  argentina_dbd:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/argentina_dbd.mp4',
 
 };
 
