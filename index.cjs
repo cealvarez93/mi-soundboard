@@ -69,9 +69,10 @@ const SOUNDS = {
   plains_of_eternity:     'https://www.youtube.com/watch?v=1p2dHxuUVig',
   chainsaw_man:           'https://www.youtube.com/watch?v=dFlDRhvM4L0',
   yo_quiero_un_heroe:     'https://www.youtube.com/watch?v=rUlr-flmDcA',
-  mikaela:         'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/mikaela.mp4',
-  y_me_le_ocurrio_otra_idea:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/y_me_le_ocurrio_otra_idea.mp4',
+  mikaela:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/mikaela.mp4',
+  y_me_le_ocurrio_otra_idea:   'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/y_me_le_ocurrio_otra_idea.mp4',
   milton_fajer:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/milton_fajer.mp4',
+  negra_nieves:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/negra_nieves.mp4',
 
 };
 
