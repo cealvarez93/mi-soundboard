@@ -8,25 +8,36 @@ const GUILD_ID  = process.env.DISCORD_GUILD_ID;
 const commands = [
   new SlashCommandBuilder()
     .setName('play')
-    .setDescription('Reproduce un sonido del soundboard')
+    .setDescription('Reproduce un sonido del soundboard o una URL de YouTube')
     .addStringOption(opt =>
-      opt.setName('name')
-         .setDescription('Nombre del sonido')
-         .setRequired(true)
-         .setAutocomplete(true)
+      opt
+        .setName('name')
+        .setDescription('Nombre del sonido (autocomplete) o URL de YouTube')
+        .setRequired(true)
+        .setAutocomplete(true)
     )
     .toJSON(),
-    new SlashCommandBuilder()
+
+  new SlashCommandBuilder()
     .setName('sounds')
     .setDescription('Muestra el glosario de sonidos disponibles')
     .toJSON()
 ];
 
-const rest = new REST({ version: '10' }).setToken(TOKEN).setAgent(new (require('undici').Agent)({ connect: { timeout: 30000 } }));
-(async () => {
-  await rest.put(
-    Routes.applicationGuildCommands(CLIENT_ID, GUILD_ID),
-    { body: commands },
+const rest = new REST({ version: '10' })
+  .setToken(TOKEN)
+  .setAgent(
+    new (require('undici').Agent)({ connect: { timeout: 30000 } })
   );
-  console.log('⚙️  Comandos registrados');
+
+(async () => {
+  try {
+    await rest.put(
+      Routes.applicationGuildCommands(CLIENT_ID, GUILD_ID),
+      { body: commands }
+    );
+    console.log('⚙️  Comandos registrados correctamente.');
+  } catch (error) {
+    console.error(error);
+  }
 })();
