@@ -76,6 +76,8 @@ const SOUNDS = {
   poppers:                    'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/poppers.mp4',
   no_mi_nieta:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/no_mi_nieta.mp4',
   argentina_dbd:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/argentina_dbd.mp4',
+  claudette_scream:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/claudette_scream.mp4',
+  claudette_hook:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/claudette_hook.mp4',
 
 };
 
