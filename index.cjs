@@ -78,6 +78,8 @@ const SOUNDS = {
   argentina_dbd:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/argentina_dbd.mp4',
   claudette_scream:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/claudette_scream.mp4',
   claudette_hook:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/claudette_hook.mp4',
+  feng_scream:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/feng_scream.mp4',
+  feng_hook:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/feng_hook.mp4',
 
 };
 
