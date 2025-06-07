@@ -80,6 +80,12 @@ const SOUNDS = {
   claudette_hook:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/claudette_hook.mp4',
   feng_scream:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/feng_scream.mp4',
   feng_hook:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/feng_hook.mp4',
+  dwight_scream:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/dwight_scream.mp4',
+  dwight_hook:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/dwight_hook.mp4',
+  meg_scream:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/meg_scream.mp4',
+  meg_hook:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/meg_hook.mp4',
+  yunjin_scream:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/yunjin_scream.mp4',
+  yunjin_hook:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/yunjin_hook.mp4',
 
 };
 
