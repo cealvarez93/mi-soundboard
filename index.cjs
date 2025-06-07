@@ -86,6 +86,7 @@ const SOUNDS = {
   meg_hook:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/meg_hook.mp4',
   yunjin_scream:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/yunjin_scream.mp4',
   yunjin_hook:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/yunjin_hook.mp4',
+  ternura_abigail:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ternura_abigail.mp4',
 
 };
 
