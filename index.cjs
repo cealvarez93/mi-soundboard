@@ -90,6 +90,8 @@ const SOUNDS = {
   ternura_perra:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ternura_perra.mp4',
   tengo_puchaina:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/tengo_puchaina.mp4',
   diles_barbara:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/diles_barbara.mp4',
+  vistima:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/vistima.mp4',
+  cocodrilo:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/cocodrilo.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
