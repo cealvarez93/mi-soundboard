@@ -88,6 +88,7 @@ const SOUNDS = {
   yunjin_hook:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/yunjin_hook.mp4',
   ternura_abigail:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ternura_abigail.mp4',
   ternura_perra:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ternura_perra.mp4',
+  tengo_puchaina:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/tengo_puchaina.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
