@@ -95,6 +95,7 @@ const SOUNDS = {
   hola_perre_pute:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/hola_perre_pute.mp4',
   a_mover_la_puchaina:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/a_mover_la_puchaina.mp4',
   bele_de_manteke:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/bele_de_manteke.mp4',
+  careless_whisper:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/careless_whisper.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
@@ -248,7 +249,15 @@ client.on('interactionCreate', async (interaction) => {
       const opusStream = await ytdlDiscord(originalUrl, {
         filter: 'audioonly',
         highWaterMark: 1 << 25,
-        quality: 'highestaudio'
+        quality: 'highestaudio',
+        requestOptions: {
+          headers: {
+            // simula un navegador moderno
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ' +
+                          'AppleWebKit/537.36 (KHTML, like Gecko) ' +
+                          'Chrome/115.0.0.0 Safari/537.36'
+          }
+        }
       });
 
       // 2) Creamos el AudioResource marcándolo como StreamType.Opus
