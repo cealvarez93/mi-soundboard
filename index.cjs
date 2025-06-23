@@ -6,6 +6,11 @@ const { Readable } = require('stream');
 const { fetch } = require('undici');
 const { Client, GatewayIntentBits } = require('discord.js');
 const {
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle
+} = require('discord.js');
+const {
   joinVoiceChannel,
   getVoiceConnection,
   createAudioPlayer,
@@ -23,6 +28,9 @@ if (!TOKEN) {
   console.error('❌ Falta DISCORD_TOKEN en .env');
   process.exit(1);
 }
+
+const MAX_PER_PAGE = 20; 
+const sessions = new Map(); // para trackear en qué página está cada user
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates]
@@ -99,6 +107,9 @@ const SOUNDS = {
   arrasando:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/arrasando.mp4',
   tanza:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/tanza.mp4',
   el_baile_de_puchaina:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/el_baile_de_puchaina.mp4',
+  chupalo_entonces:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/chupalo_entonces.mp4',
+  y_el_pico:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/y_el_pico.mp4',
+  que_te_sorprende:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/que_te_sorprende.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
@@ -110,6 +121,92 @@ let keepAlive = false;
 const player = createAudioPlayer({
   behaviors: { noSubscriber: NoSubscriberBehavior.Stop }
 });
+
+async function handlePlay(interaction, soundKey) {
+  const member = interaction.member;
+  const voiceChannel = member.voice.channel;
+  if (!voiceChannel) {
+    await interaction.reply({ content: 'Debes estar en un canal de voz.', flags: 64 });
+    return;
+  }
+
+  const botMember = await interaction.guild.members.fetch(client.user.id);
+  const perms = voiceChannel.permissionsFor(botMember);
+  if (!perms.has('Connect') || !perms.has('Speak')) {
+    await interaction.reply({
+      content: 'Necesito permisos de Conectar y Hablar en ese canal.',
+      flags: 64
+    });
+    return;
+  }
+
+  let conn = getVoiceConnection(interaction.guild.id);
+  if (!conn) {
+    conn = joinVoiceChannel({
+      channelId:      voiceChannel.id,
+      guildId:        interaction.guild.id,
+      adapterCreator: voiceChannel.guild.voiceAdapterCreator
+    });
+    connGuildId = interaction.guild.id;
+  }
+
+  let originalUrl = /^https?:\/\//i.test(soundKey) ? soundKey : SOUNDS[soundKey];
+  if (!originalUrl) {
+    await interaction.reply({
+      content: `❌ No encontré \`${soundKey}\`, ni es una URL que yo soporte.`,
+      flags: 64
+    });
+    return;
+  }
+
+  let isYT = false;
+  try {
+    const ytType = await play.yt_validate(originalUrl);
+    isYT = (ytType === 'video' || ytType === 'playlist');
+  } catch {}
+
+  let resource;
+  try {
+    if (isYT) {
+      const opusStream = await ytdlDiscord(originalUrl, {
+        filter: 'audioonly',
+        highWaterMark: 1 << 25,
+        quality: 'highestaudio',
+        requestOptions: {
+          headers: { 'User-Agent': 'Mozilla/5.0' }
+        }
+      });
+
+      resource = createAudioResource(opusStream, {
+        inputType: StreamType.Opus,
+        inlineVolume: true
+      });
+    } else {
+      resource = createAudioResource(originalUrl, {
+        inputType: StreamType.Arbitrary,
+        inlineVolume: true
+      });
+    }
+
+    resource.volume.setVolume(1);
+    player.play(resource);
+    conn.subscribe(player);
+  } catch (err) {
+    console.error('Error al reproducir sonido:', err);
+    await interaction.reply({ content: '❌ Error al reproducir el sonido.', flags: 64 });
+    return;
+  }
+
+  if (interaction.isButton && interaction.isButton()) {
+    await interaction.deferUpdate(); // 👈 No muestra mensaje, no mueve el panel
+  } else {
+    await interaction.reply({
+      content: `▶️ Reproduciendo: **${soundKey.replace(/_/g, ' ')}**`,
+      flags: 64
+    });
+  }
+}
+
 
 // Listener de cambio de estado:
 player.on('stateChange', (oldState, newState) => {
@@ -174,126 +271,126 @@ client.on('interactionCreate', async (interaction) => {
     return;
   }
 
-  // 3) /play
-  if (!interaction.isCommand() || interaction.commandName !== 'play') return;
+  // /panel
+  if (interaction.isCommand() && interaction.commandName === 'panel') {
+    const allKeys = Object.keys(SOUNDS);
+    const totalPages = Math.ceil(allKeys.length / MAX_PER_PAGE);
+    const userId = interaction.user.id;
+    const currentPage = 0;
+    sessions.set(userId, currentPage);
 
-  // 3.1) Verificar que el usuario esté en un canal de voz
-  const member = interaction.member;
-  const voiceChannel = member.voice.channel;
-  if (!voiceChannel) {
-    await interaction.reply({ content: 'Debes estar en un canal de voz.', flags: 64 });
-    return;
+    const start = currentPage * MAX_PER_PAGE;
+    const end = start + MAX_PER_PAGE;
+    const keys = allKeys.slice(start, end);
+
+    const rows = [];
+    for (let i = 0; i < Math.min(keys.length, 20); i += 5) {
+    const row = new ActionRowBuilder();
+    keys.slice(i, i + 5).forEach(key => {
+      row.addComponents(
+        new ButtonBuilder()
+          .setCustomId(`play_${key}`)
+          .setLabel(key.replace(/_/g, ' ').slice(0, 80))
+          .setStyle(ButtonStyle.Primary)
+      );
+    });
+    rows.push(row);
   }
 
-  // 3.2) Verificar permisos del bot en ese canal
-  const botMember = await interaction.guild.members.fetch(client.user.id);
-  const perms = voiceChannel.permissionsFor(botMember);
-  if (!perms.has('Connect') || !perms.has('Speak')) {
+    const navRow = new ActionRowBuilder()
+      .addComponents(
+        new ButtonBuilder()
+          .setCustomId('panel_prev')
+          .setLabel('⬅️ Anterior')
+          .setStyle(ButtonStyle.Secondary)
+          .setDisabled(currentPage === 0),
+        new ButtonBuilder()
+          .setCustomId('panel_next')
+          .setLabel('Siguiente ➡️')
+          .setStyle(ButtonStyle.Secondary)
+          .setDisabled(currentPage === totalPages - 1)
+      );
+
+    rows.push(navRow);
+
     await interaction.reply({
-      content: 'Necesito permisos de Conectar y Hablar en ese canal.',
-      flags: 64
+      content: `🎛️ Panel de sonidos (página 1 de ${totalPages})`,
+      components: rows
     });
     return;
   }
 
-  // 3.3) Crear o reutilizar la VoiceConnection para esta guild
-  let conn = getVoiceConnection(interaction.guild.id);
-  if (!conn) {
-    conn = joinVoiceChannel({
-      channelId:      voiceChannel.id,
-      guildId:        interaction.guild.id,
-      adapterCreator: voiceChannel.guild.voiceAdapterCreator
-    });
-    connGuildId = interaction.guild.id;
 
-    conn.on('stateChange', (oldState, newState) => {
-      console.log(`[VoiceConnection] ${oldState.status} ➔ ${newState.status}`);
-    });
-    conn.on('error', e => console.error('[VoiceConnection ERROR]', e));
-  }
-
-  // 3.4) Obtener la URL del sonido elegido
-  const soundKey    = interaction.options.getString('name');
-  let originalUrl = null;
-
-  // 3.4.1) ¿“soundKey” parece una URL? (empeza con http:// o https://)
-  if (/^https?:\/\//i.test(soundKey)) {
-    // El usuario directamente puso una URL (p. ej. YouTube)
-    originalUrl = soundKey;
-  } else {
-    // No arrancó con http(s), asumimos que es el “key” en el mapping SOUNDS
-    originalUrl = SOUNDS[soundKey];
-  }
-
-  // 3.4.2) Si aún no tenemos URL válida, devolvemos error
-  if (!originalUrl) {
-    await interaction.reply({
-      content: `❌ No encontré \`${soundKey}\`, ni es una URL que yo soporte.`,
-      flags: 64
-    });
+  // /play
+  if (interaction.isCommand() && interaction.commandName === 'play') {
+    const soundKey = interaction.options.getString('name');
+    await handlePlay(interaction, soundKey);
     return;
   }
 
-  // 3.5) Validar/encontrar si la “originalUrl” resultante es un video/playlist de YouTube
-  let isYT = false;
-  try {
-    const ytType = await play.yt_validate(originalUrl);
-    isYT = (ytType === 'video' || ytType === 'playlist');
-  } catch (err) {
-    // Si play.yt_validate lanza error, asumimos que NO es YouTube
-    isYT = false;
-  }
 
-  let resource;
-  if (isYT) {
-    console.log(`🐛 Reproduciendo YouTube: ${originalUrl}`);
-    try {
-      // 1) Obtenemos el stream OPUS listo para Discord (ytdl-core-discord hace la precarga Opus)
-      const opusStream = await ytdlDiscord(originalUrl, {
-        filter: 'audioonly',
-        highWaterMark: 1 << 25,
-        quality: 'highestaudio',
-        requestOptions: {
-          headers: {
-            // simula un navegador moderno
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ' +
-                          'AppleWebKit/537.36 (KHTML, like Gecko) ' +
-                          'Chrome/115.0.0.0 Safari/537.36'
-          }
-        }
-      });
+  // Botones
+  if (interaction.isButton()) {
+    const { customId, user } = interaction;
 
-      // 2) Creamos el AudioResource marcándolo como StreamType.Opus
-      resource = createAudioResource(opusStream, {
-        inputType: StreamType.Opus,
-        inlineVolume: true
-      });
-    } catch (err) {
-      console.error('Error al reproducir YouTube con ytdl-core-discord:', err);
-      return interaction.reply({
-        content: '❌ Ocurrió un problema al reproducir ese video de YouTube.',
-        flags: 64
+    if (customId.startsWith('play_')) {
+      const soundKey = customId.replace('play_', '');
+      await handlePlay(interaction, soundKey); // 🔥 esta es la forma correcta
+      return;
+    }
+
+    if (customId === 'panel_next' || customId === 'panel_prev') {
+      const allKeys = Object.keys(SOUNDS);
+      const totalPages = Math.ceil(allKeys.length / MAX_PER_PAGE);
+      const userId = user.id;
+      let currentPage = sessions.get(userId) ?? 0;
+
+      currentPage = customId === 'panel_next'
+        ? Math.min(currentPage + 1, totalPages - 1)
+        : Math.max(currentPage - 1, 0);
+
+      sessions.set(userId, currentPage);
+
+      const start = currentPage * MAX_PER_PAGE;
+      const end = start + MAX_PER_PAGE;
+      const keys = allKeys.slice(start, end);
+
+      const rows = [];
+      for (let i = 0; i < keys.length; i += 5) {
+        const row = new ActionRowBuilder();
+        keys.slice(i, i + 5).forEach(key => {
+          row.addComponents(
+            new ButtonBuilder()
+              .setCustomId(`play_${key}`)
+              .setLabel(key.replace(/_/g, ' ').slice(0, 80))
+              .setStyle(ButtonStyle.Primary)
+          );
+        });
+        rows.push(row);
+      }
+
+      const navRow = new ActionRowBuilder()
+        .addComponents(
+          new ButtonBuilder()
+            .setCustomId('panel_prev')
+            .setLabel('⬅️ Anterior')
+            .setStyle(ButtonStyle.Secondary)
+            .setDisabled(currentPage === 0),
+          new ButtonBuilder()
+            .setCustomId('panel_next')
+            .setLabel('Siguiente ➡️')
+            .setStyle(ButtonStyle.Secondary)
+            .setDisabled(currentPage === totalPages - 1)
+        );
+
+      rows.push(navRow);
+
+      await interaction.update({
+        content: `🎛️ Panel de sonidos (página ${currentPage + 1} de ${totalPages})`,
+        components: rows
       });
     }
-  } else {
-    // Si no es YouTube, asumimos que es la URL de un mp4 remoto (o webhook HTTP)
-    console.log(`🐛 Reproduciendo MP4 directo: ${originalUrl}`);
-    resource = createAudioResource(originalUrl, {
-      inputType: StreamType.Arbitrary,
-      inlineVolume: true
-    });
   }
-
-  // Ajusta el volumen:  0 = silencio, 1 = volumen original, puedes probar algo como 0.5 (mitad)
-  resource.volume.setVolume(0.7);
-  // 3.6) Reproducir y suscribir el AudioPlayer
-  player.play(resource);
-  conn.subscribe(player);
-
-  await interaction.reply({
-    content: `▶️ Reproduciendo: **${soundKey.replace(/_/g, ' ')}**`,
-    flags: 64
-  });
 });
 
 client.login(TOKEN);

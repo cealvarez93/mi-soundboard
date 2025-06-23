@@ -21,7 +21,12 @@ const commands = [
   new SlashCommandBuilder()
     .setName('sounds')
     .setDescription('Muestra el glosario de sonidos disponibles')
-    .toJSON()
+    .toJSON(),
+
+  new SlashCommandBuilder()
+  .setName('panel')
+  .setDescription('Muestra botones para reproducir sonidos')
+  .toJSON()
 ];
 
 const rest = new REST({ version: '10' })
