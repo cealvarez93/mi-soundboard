@@ -114,6 +114,12 @@ const SOUNDS = {
   crees_en_santa:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/crees_en_santa.mp4',
   me_enamore_de_un_fifx:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/me_enamore_de_un_fifx.mp4',
   no_soy_tu_bro:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/no_soy_tu_bro.mp4',
+  como_va_su_die:               'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/como_va_su_die.mp4',
+  con_el_de_sharpie:            'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/con_el_de_sharpie.mp4',
+  felez_neveded:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/felez_neveded.mp4',
+  no_seas_tente_mi_bebe:        'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/no_seas_tente_mi_bebe.mp4',
+  vieja_mitotera:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/vieja_mitotera.mp4',
+  silencio_gay:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/silencio_gay.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
