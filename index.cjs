@@ -110,6 +110,10 @@ const SOUNDS = {
   chupalo_entonces:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/chupalo_entonces.mp4',
   y_el_pico:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/y_el_pico.mp4',
   que_te_sorprende:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/que_te_sorprende.mp4',
+  saludo_anali:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/saludo_anali.mp4',
+  crees_en_santa:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/crees_en_santa.mp4',
+  me_enamore_de_un_fifx:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/me_enamore_de_un_fifx.mp4',
+  no_soy_tu_bro:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/no_soy_tu_bro.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
