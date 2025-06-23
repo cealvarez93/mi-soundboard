@@ -122,6 +122,7 @@ const SOUNDS = {
   silencio_gay:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/silencio_gay.mp4',
   zelda_scream:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/zelda_scream.mp4',
   arrg_arrg:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/arrg_arrg.mp4',
+  desesperada:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/desesperada.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
