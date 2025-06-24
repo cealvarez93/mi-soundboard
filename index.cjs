@@ -131,7 +131,7 @@ const SOUNDS = {
   fallaste:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/fallaste.mp4',
   aleluya:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/aleluya.mp4',
   si_senor:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/si_senor.mp4',
-  bye_felicia:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/fallaste.mp4',
+  bye_felicia:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/bye_felicia.mp4',
   n_word:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/n_word.mp4',
 };
 
