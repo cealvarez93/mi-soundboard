@@ -128,6 +128,11 @@ const SOUNDS = {
   gomen_ne:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/gomen_ne.mp4',
   my_little_pussy:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/my_little_pussy.mp4',
   me_muero:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/me_muero.mp4',
+  fallaste:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/fallaste.mp4',
+  aleluya:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/aleluya.mp4',
+  si_senor:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/si_senor.mp4',
+  bye_felicia:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/fallaste.mp4',
+  n_word:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/n_word.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
