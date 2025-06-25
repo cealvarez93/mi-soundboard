@@ -138,6 +138,7 @@ const SOUNDS = {
   too_easy:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/too_easy.mp4',
   loser:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/loser.mp4',
   oh_yeah:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/oh_yeah.mp4',
+  escucha_las_palabras:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/escucha_las_palabras.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
