@@ -20,16 +20,6 @@ const {
   NoSubscriberBehavior
 } = require('@discordjs/voice');
 
-const { 
-  ActionRowBuilder,
-  ButtonBuilder, 
-  ButtonStyle, 
-  StringSelectMenuBuilder, 
-  ComponentType, 
-  InteractionType
-} = require('discord.js');
-
-
 const play = require('play-dl'); // Sólo lo usamos para validar YT, si quieres puedes eliminarlo y usar ytdl-core para todo.
 const ytdlDiscord = require('ytdl-core-discord');
 
@@ -45,23 +35,6 @@ const sessions = new Map(); // para trackear en qué página está cada user
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates]
 });
-
-const CATEGORIES = {
-  memes: {
-    salome: SOUNDS.salome,
-    rocko: SOUNDS.rocko,
-    potaxio_potaxio: SOUNDS.potaxio_potaxio,
-  },
-  dbd: {
-    claudette_scream: SOUNDS.claudette_scream,
-    feng_hook: SOUNDS.feng_hook,
-  },
-  perreo: {
-    devorame: SOUNDS.devorame,
-    electronica: SOUNDS.electronica,
-  },
-  // Agrega más categorías según tu gusto
-};
 
 const SOUNDS = {
   luli_snack:             'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/luli_snack.mp4',
