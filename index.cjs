@@ -114,6 +114,8 @@ const SOUNDS = {
   saludo_anali:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/saludo_anali.mp4',
   saludo_elsa:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/saludo_elsa.mp4',
   saludo_rosa:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/saludo_rosa.mp4',
+  saludo_elba:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/saludo_elba.mp4',
+  saludo_maria:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/saludo_maria.mp4',
   crees_en_santa:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/crees_en_santa.mp4',
   me_enamore_de_un_fifx:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/me_enamore_de_un_fifx.mp4',
   no_soy_tu_bro:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/no_soy_tu_bro.mp4',
