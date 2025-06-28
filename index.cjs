@@ -136,9 +136,9 @@ const SOUNDS = {
   my_little_pussy:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/my_little_pussy.mp4',
   me_muero:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/me_muero.mp4',
   fallaste:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/fallaste.mp4',
-  aleluya:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/aleluya.mp4',
   si_senor:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/si_senor.mp4',
   bye_felicia:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/bye_felicia.mp4',
+  aleluya:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/aleluya.mp4',
   n_word:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/n_word.mp4',
   gato_ton:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/gato_tom.mp4',
   die_bitch:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/die_bitch.mp4',
@@ -149,6 +149,8 @@ const SOUNDS = {
   hana_ni_natte:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/hana_ni_natte.mp4',
   she_was_a_fairy:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/she_was_a_fairy.mp4',
   rosas:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/rosas.mp4',
+  be_my_lover:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/be_my_lover.mp4',
+  penelope:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/penelope.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
