@@ -148,6 +148,7 @@ const SOUNDS = {
   escucha_las_palabras:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/escucha_las_palabras.mp4',
   hana_ni_natte:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/hana_ni_natte.mp4',
   she_was_a_fairy:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/she_was_a_fairy.mp4',
+  rosas:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/rosas.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
