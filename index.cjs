@@ -151,6 +151,7 @@ const SOUNDS = {
   rosas:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/rosas.mp4',
   be_my_lover:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/be_my_lover.mp4',
   penelope:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/penelope.mp4',
+  la_polizia_no:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/la_polizia_no.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
