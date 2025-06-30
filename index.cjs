@@ -125,13 +125,12 @@ const SOUNDS = {
   no_seas_tente_mi_bebe:        'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/no_seas_tente_mi_bebe.mp4',
   vieja_mitotera:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/vieja_mitotera.mp4',
   silencio_gay:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/silencio_gay.mp4',
-  desesperada:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/desesperada.mp4',
   hyakuretsukyaku:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/hyakuretsukyaku.mp4',
   tenshokyaku:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/tenshokyaku.mp4',
   kikoken:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/kikoken.mp4',
   kikosho:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/kikosho.mp4',
   gomen_ne:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/gomen_ne.mp4',
-  my_little_pussy:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/my_little_pussy.mp4',
+  date_prisa:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/date_prisa.mp4',
   me_muero:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/me_muero.mp4',
   fallaste:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/fallaste.mp4',
   si_senor:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/si_senor.mp4',
@@ -158,7 +157,9 @@ const SOUNDS = {
   bailo:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/bailo.mp4',
   careless_whisper:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/careless_whisper.mp4',
   zelda_scream:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/zelda_scream.mp4',
+  desesperada:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/desesperada.mp4',
   arrg_arrg:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/arrg_arrg.mp4',
+  my_little_pussy:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/my_little_pussy.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
