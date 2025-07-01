@@ -137,6 +137,12 @@ const SOUNDS = {
   nuu:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/nuu.mp4',
   enemigo:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/enemigo.mp4',
   cof:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/cof.mp4',
+  ya_te_pillare:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ya_te_pillare.mp4',
+  ay:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ay.mp4',
+  a_correr:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/a_correr.mp4',
+  estas_loco:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/estas_loco.mp4',
+  ahi_viene:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ahi_viene.mp4',
+  chao:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/chao.mp4',
   bye_felicia:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/bye_felicia.mp4',
   aleluya:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/aleluya.mp4',
   n_word:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/n_word.mp4',
@@ -162,6 +168,8 @@ const SOUNDS = {
   arrua:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/arrua.mp4',
   arria:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/arria.mp4',
   my_little_pussy:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/my_little_pussy.mp4',
+  me_electrocutaste:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/me_electrocutaste.mp4',
+  meo_o_parisi:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/meo_o_parisi.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
