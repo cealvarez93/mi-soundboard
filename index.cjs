@@ -167,9 +167,13 @@ const SOUNDS = {
   arrg_arrg:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/arrg_arrg.mp4',
   arrua:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/arrua.mp4',
   arria:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/arria.mp4',
+  oh_no:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/oh_no.mp4',
   my_little_pussy:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/my_little_pussy.mp4',
   me_electrocutaste:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/me_electrocutaste.mp4',
   meo_o_parisi:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/meo_o_parisi.mp4',
+  con_calma:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/con_calma.mp4',
+  ocarina_of_can_1:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ocarina_of_can_1.mp4',
+  ocarina_of_can_2:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ocarina_of_can_2.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
