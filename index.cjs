@@ -174,6 +174,7 @@ const SOUNDS = {
   con_calma:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/con_calma.mp4',
   ocarina_of_can_1:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ocarina_of_can_1.mp4',
   ocarina_of_can_2:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ocarina_of_can_2.mp4',
+  cara_de_cuica:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/cara_de_cuica.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
