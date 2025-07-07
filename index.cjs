@@ -177,6 +177,8 @@ const SOUNDS = {
   cara_de_cuica:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/cara_de_cuica.mp4',
   kakegurui:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/kakegurui.mp4',
   yo_me_nutro:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/yo_me_nutro.mp4',
+  period:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/period.mp4',
+  fergie:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/fergie.mp4',
 };
 
 // Guardamos el guildId donde está la conexión activa
