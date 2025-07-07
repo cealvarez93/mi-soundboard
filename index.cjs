@@ -178,6 +178,8 @@ const SOUNDS = {
   ocarina_of_can_4:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ocarina_of_can_4.mp4',
   ocarina_of_can_5:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ocarina_of_can_5.mp4',
   ocarina_of_can_6:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ocarina_of_can_6.mp4',
+  ocarina_of_can_7:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ocarina_of_can_7.mp4',
+  ocarina_of_can_8:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/ocarina_of_can_8.mp4',
   cara_de_cuica:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/cara_de_cuica.mp4',
   kakegurui:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/kakegurui.mp4',
   yo_me_nutro:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/yo_me_nutro.mp4',
