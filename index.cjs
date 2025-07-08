@@ -165,6 +165,7 @@ const SOUNDS = {
   zelda_scream:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/zelda_scream.mp4',
   desesperada:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/desesperada.mp4',
   arrg_arrg:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/arrg_arrg.mp4',
+  spirit_arrg:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/spirit_arrg.mp4',
   myers_arrg:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/arrg.mp4',
   arrua:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/arrua.mp4',
   arria:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/arria.mp4',
