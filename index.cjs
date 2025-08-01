@@ -198,6 +198,7 @@ const SOUNDS = {
   luigi:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/luigi.mp4',
   dona_leticie:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/dona_leticie.mp4',
   jet2:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/jet2.mp4',
+  celia_potaxie:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/celia_potaxie.mp4',
 
 };
 
