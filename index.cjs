@@ -196,7 +196,8 @@ const SOUNDS = {
   myers_tier3:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/myers_tier3.mp4',
   mario:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/mario.mp4',
   luigi:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/luigi.mp4',
-
+  dona_leticie:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/dona_leticie.mp4',
+  jet2:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/jet2.mp4',
 
 };
 
