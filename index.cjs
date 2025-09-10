@@ -1,7 +1,7 @@
 // index.cjs
 require('dotenv').config();
 
-const ytdl = require('ytdl-core');
+//const ytdl = require('ytdl-core');
 const { Readable } = require('stream');
 const { fetch } = require('undici');
 const { Client, GatewayIntentBits } = require('discord.js');
@@ -21,7 +21,7 @@ const {
 } = require('@discordjs/voice');
 
 const play = require('play-dl'); // Sólo lo usamos para validar YT, si quieres puedes eliminarlo y usar ytdl-core para todo.
-const ytdlDiscord = require('ytdl-core-discord');
+//const ytdlDiscord = require('ytdl-core-discord');
 
 const TOKEN = process.env.DISCORD_TOKEN;
 if (!TOKEN) {
@@ -199,6 +199,9 @@ const SOUNDS = {
   dona_leticie:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/dona_leticie.mp4',
   jet2:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/jet2.mp4',
   celia_potaxie:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/celia_potaxie.mp4',
+  africana:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/africana.mp4',
+  pajarita:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/pajarita.mp4',
+  mi_hijo_es_negro:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/mi_hijo_es_negro.mp4',
 
 };
 
@@ -258,17 +261,13 @@ async function handlePlay(interaction, soundKey) {
   let resource;
   try {
     if (isYT) {
-      const opusStream = await ytdlDiscord(originalUrl, {
-        filter: 'audioonly',
-        highWaterMark: 1 << 25,
-        quality: 'highestaudio',
-        requestOptions: {
-          headers: { 'User-Agent': 'Mozilla/5.0' }
-        }
+      // stream directo con play-dl, compatible con @discordjs/voice
+      const { stream, type } = await play.stream(originalUrl, {
+        discordPlayerCompatibility: true
       });
 
-      resource = createAudioResource(opusStream, {
-        inputType: StreamType.Opus,
+      resource = createAudioResource(stream, {
+        inputType: type,          // play-dl te dice el tipo correcto (Opus/WebM/etc.)
         inlineVolume: true
       });
     } else {
@@ -413,10 +412,24 @@ client.on('interactionCreate', async (interaction) => {
 
   // /play
   if (interaction.isCommand() && interaction.commandName === 'play') {
-    const soundKey = interaction.options.getString('name');
+    // Acepta 'name'... y cae a cualquier valor disponible si el cliente no lo envía bien
+    const soundKey =
+      interaction.options.getString('name') ??
+      interaction.options.getString('url') ??              // por si más adelante agregas 'url'
+      interaction.options?.data?.[0]?.value ?? null;       // último recurso
+
+    if (!soundKey) {
+      await interaction.reply({
+        content: '⚠️ Debes indicar un nombre o URL. Usa **/play** y rellena el campo **name** (ej: `https://www.youtube.com/watch?v=co-TFLbaZAE` o `luli_snack`).',
+        ephemeral: true
+      });
+      return;
+    }
+    console.log('options data:', interaction.options?.data);
     await handlePlay(interaction, soundKey);
     return;
   }
+
 
 
   // Botones
