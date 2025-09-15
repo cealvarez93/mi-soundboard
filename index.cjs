@@ -202,6 +202,7 @@ const SOUNDS = {
   africana:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/africana.mp4',
   pajarita:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/pajarita.mp4',
   mi_hijo_es_negro:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/mi_hijo_es_negro.mp4',
+  la_consentida:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/la_consentida.mp4',
 
 };
 
