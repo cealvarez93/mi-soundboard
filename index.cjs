@@ -128,6 +128,7 @@ const SOUNDS = {
   silencio_gay:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/silencio_gay.mp4',
   hyakuretsukyaku:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/hyakuretsukyaku.mp4',
   tenshokyaku:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/tenshokyaku.mp4',
+  hazanshu:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/hazanshu.mp4',
   spinning_bird_kick:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/spinning_bird_kick.mp4',
   kikoken:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/kikoken.mp4',
   kikosho:                'https://raw.githubusercontent.com/cealvarez93/mi-soundboard/main/sounds/kikosho.mp4',
